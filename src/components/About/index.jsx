@@ -1,3 +1,4 @@
+import Footer from "../Footer"
 import Navbar from "../Navbar"
 
 const About = () => {
@@ -5,6 +6,7 @@ const About = () => {
         <div>
             <Navbar />
             <h1>About page</h1>
+            <Footer />
         </div>
     )
 }
