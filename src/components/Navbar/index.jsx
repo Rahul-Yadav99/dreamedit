@@ -1,11 +1,10 @@
 import { useState } from "react"
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const Navbar = () => {
 
     const location = useLocation()
 
-    const navigate = useNavigate()
 
     const [mobileSize, setMobileSize] = useState(false)
     
@@ -77,7 +76,10 @@ const Navbar = () => {
                             menus.map((item, index) => {
                                 return(
                                     <Link to={item.href} 
-                                        className="text-white"
+                                        className="text-white px-4 py-2"
+                                        style={{
+                                            borderBottom: (item.href === location.pathname) ? '1px solid white' : 'transparent',
+                                        }}
                                     >
                                         {item.label}
                                     </Link>
