@@ -30,7 +30,7 @@ const Navbar = () => {
                 <div className="flex items-cente justify-center">
                     <Link 
                         to={'/'}
-                        className="font-mono md:text-3xl text-2xl font font-semibold text-white tracking-widest"
+                        className="font-mono md:text-3xl text-xl font font-semibold text-white tracking-widest"
                     >
                         Dream Edit
                     </Link>
