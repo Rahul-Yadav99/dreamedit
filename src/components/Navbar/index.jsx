@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 const Navbar = () => {
 
+    const location = useLocation()
+
+    const navigate = useNavigate()
+
+    const [mobileSize, setMobileSize] = useState(false)
+    
     const menus = [
         {
             label: 'Home',
@@ -12,70 +19,74 @@ const Navbar = () => {
             href: '/about'
         },
         {
-            label: 'Work',
-            href: '/work'
+            label: 'Portfolio',
+            href: '/portfolio'
         }
     ]
 
     return (
-        <>
-            {/* computer */}
-            <div className="md:block hidden">
-                <nav className="py-4 px-32 shadow-lg flex items-center justify-between ">
-                    <h1 
-                        className=" font-mono text-2xl font-semibold tracking-widest ">
-                        <Link to={'/'}>DreamEdit</Link>
-                    </h1>
-
-                    <div className="flex items-center gap-3">
-                        <ul className="flex items-center justify-between gap-3">
-                            {
-                                menus.map((item, index) => {
-                                    return (
-                                        <li key={index} className="text-base font-semibold ">
-                                            <Link to={item.href} 
-                                                className=" py-2 px-4 hover:transition delay-75 hover:border-b-2 hover:border-black"
-                                            >{item.label}</Link>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <button className="py-2 px-4 text-base font-semibold bg-[dodgerblue] text-white rounded hover:bg-[#115598] transition delay-75">Resume <i className="ri-link"></i></button>
-                        <button className="py-2 px-4 text-base font-semibold border border-[dodgerblue] rounded">Contact Us <i class="ri-contacts-line"></i></button>
+        <div>
+            <nav className="bg-black flex items-center justify-around py-4 sticky">
+                <div className="flex items-cente justify-center">
+                    <Link 
+                        to={'/'}
+                        className="font-mono md:text-3xl text-2xl font font-semibold text-white tracking-widest"
+                    >
+                        Dream Edit
+                    </Link>
+                </div>
+                <button 
+                    className="md:hidden"
+                    onClick={()=>setMobileSize(!mobileSize)}
+                >
+                    <i className="ri-menu-2-line text-white font-semibold text-xl"></i>
+                </button>
+                <div 
+                    className="md:flex hidden"
+                >
+                   <ul className="md:flex items-center justify-center gap-12 ">
+                        {
+                            menus.map((item, index) => {
+                                return (
+                                    <li key={index}>
+                                        <Link 
+                                            to={item.href}
+                                            className="text-white text-base font-semibold px-4 py-2 "
+                                            style={{
+                                                borderBottom: (item.href === location.pathname) ? '1px solid white' : 'transparent',
+                                            }}
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
+                   </ul>
+                </div>
+            </nav>
+                <aside 
+                    className="fixed top-[63.4px] left-0 bg-black h-screen md:hidden overflow-hidden"
+                    style={{
+                            width: mobileSize ? '250px' : '0px',
+                            transition: '0.3s'
+                        }}
+                >
+                    <div className="flex flex-col p-8 gap-6 ">
+                        {
+                            menus.map((item, index) => {
+                                return(
+                                    <Link to={item.href} 
+                                        className="text-white"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )
+                            })
+                        }
                     </div>
-                </nav>
-            </div>
-
-            {/* mobile */}
-
-            <div className="md:hidden block">
-                <nav className="py-4 px-32 shadow-lg flex items-center justify-between ">
-                    <h1 
-                        className=" font-mono text-2xl font-semibold tracking-widest ">
-                        <Link to={'/'}>DreamEdit</Link>
-                    </h1>
-
-                    <div className="flex items-center gap-3">
-                        <ul className="flex items-center justify-between gap-3">
-                            {
-                                menus.map((item, index) => {
-                                    return (
-                                        <li key={index} className="text-base font-semibold ">
-                                            <Link to={item.href} 
-                                                className=" py-2 px-4 hover:transition delay-75 hover:border-b-2 hover:border-black"
-                                            >{item.label}</Link>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <button className="py-2 px-4 text-base font-semibold bg-[dodgerblue] text-white rounded hover:bg-[#115598] transition delay-75">Resume <i className="ri-link"></i></button>
-                        <button className="py-2 px-4 text-base font-semibold border border-[dodgerblue] rounded">Contact Us <i class="ri-contacts-line"></i></button>
-                    </div>
-                </nav>
-            </div>
-        </>
+                </aside>
+        </div>
     )
 }
 

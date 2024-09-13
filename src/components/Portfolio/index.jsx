@@ -1,6 +1,6 @@
 import Navbar from "../Navbar"
 
-const Work = () => {
+const Portfolio = () => {
     return (
         <div>
             <Navbar />
@@ -9,4 +9,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Portfolio
