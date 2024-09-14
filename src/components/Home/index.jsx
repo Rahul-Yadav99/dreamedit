@@ -104,17 +104,17 @@ const Home = () => {
 
                {/* mobile */}
 
-               <div className="bg-black h-screen md:hidden flex justify-center items-center flex-col overflow-hidden gap-2">
-                    <div className="h-[50%] w-[100%]  pl-12 py-11">
+               <div className="bg-black md:hidden flex justify-center items-center flex-col overflow-hidden gap-y-[25px] pb-4">
+                    <div className="h-[50%] w-[100%]  pl-2 py-11">
                             <h1 
-                                className="text-white text-[50px] font-[700] mb-6"
+                                className="text-white text-[50px] font-[700] mb-2"
                                 style={{
                                     letterSpacing: '3px'
                                 }}
                             >
                                 Hritik Yadav 
                             </h1>
-                            <h1 className="mb-6">
+                            <h1 className="mb-2">
                                 {mobileTyping()}    
                             </h1>    
                             <p
