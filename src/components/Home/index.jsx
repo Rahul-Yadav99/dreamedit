@@ -21,7 +21,7 @@ const Home = () => {
             speed={20}
             style={{ 
                 fontSize: '50px', 
-                display: 'inline-block', 
+                
                 fontWeight: 700 ,
                 color: '#29b4d2',
                 letterSpacing: '7px',
@@ -46,12 +46,12 @@ const Home = () => {
             wrapper="span"
             speed={20}
             style={{ 
-                fontSize: '15px', 
+                fontSize: '50px', 
                 display: 'inline-block', 
-                fontWeight: 500 ,
+                fontWeight: 700 ,
                 color: '#29b4d2',
                 letterSpacing: '4px',
-                marginLeft: '12px'
+                
             }}
 
             repeat={Infinity}
@@ -62,11 +62,12 @@ const Home = () => {
     return (
         <div>
             <Navbar />
-               <div className="overflow-hidden md:min-h-screen min-h-[50vh] py-12 bg-black  flex md:flex-row justify-center items-center flex-col-reverse md:gap-10 gap-5 md:px-32">
-                    <div className="h-full md:w-[60%] w-full">
+            {/* computer */}
+               <div className="bg-black  md:flex  justify-center items-center gap-10 px-32 py-12 hidden">
+                    <div className="w-[70%] mr-[50px] pl-[100px]">
                         {/* computer */}
                             <h1 
-                                className="text-white md:text-5xl md:font-[700] md:mb-6 md:flex hidden "
+                                className="text-white text-5xl font-[700] mb-6"
                                 style={{
                                     letterSpacing: '7px'
                                 }}
@@ -75,7 +76,7 @@ const Home = () => {
                             </h1>
 
                             <p
-                                className="text-white w-[600px] mb-6 md:flex  hidden"
+                                className="text-white w-[600px] mb-6"
                                 style={{
                                     letterSpacing: 4
                                 }}    
@@ -83,27 +84,8 @@ const Home = () => {
                                 Hello! I'm Hritik Yadav. I'm a Video Editor, and I'm very passionate and dedicated to my work.
                             </p>
 
-                            {/* mobile */}
 
-                            <h1 
-                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] mb-6 flex md:hidden text-[15px] font-[500]"
-                                style={{
-                                    letterSpacing: '4px'
-                                }}
-                            >
-                                Hritik Yadav {mobileTyping()}
-                            </h1>
-
-                            <p
-                                className="text-white w-[600px] mb-6 flex md:hidden pl-20 text-[10px] "
-                                style={{
-                                    letterSpacing: 2
-                                }}    
-                            >
-                                Hello! I'm Hritik Yadav. I'm a Video Editor.
-                            </p>
-
-                            <button className=" text-white font-medium ml-20">
+                            <button className=" text-white font-medium">
                                 <Link to={'/contact'}
                                     className=" bg-[#29b4d2] px-6 py-2 rounded "
                                 >
@@ -113,9 +95,51 @@ const Home = () => {
                             </button>
                     </div>
 
-                    <div className="bg-green-500">
+                    <div className="h-full w-[30%] flex items-center justify-end pr-[200px] ">
                         <img src="./images/logo.jpg" alt="" 
-                            className="md:h-[672px] md:w-[480] h-[380px]"
+                            className="h-[336px] w-[240px]"
+                        />
+                    </div>
+               </div>
+
+               {/* mobile */}
+
+               <div className="bg-black h-screen md:hidden flex justify-center items-center flex-col overflow-hidden gap-2">
+                    <div className="h-[50%] w-[100%]  pl-12 py-11">
+                            <h1 
+                                className="text-white text-[50px] font-[700] mb-6"
+                                style={{
+                                    letterSpacing: '3px'
+                                }}
+                            >
+                                Hritik Yadav 
+                            </h1>
+                            <h1 className="mb-6">
+                                {mobileTyping()}    
+                            </h1>    
+                            <p
+                                className="text-white mb-6"
+                                style={{
+                                    letterSpacing: 4
+                                }}    
+                            >
+                                Hello! I'm Hritik Yadav. I'm a Video Editor, and I'm very passionate and dedicated to my work.
+                            </p>
+
+
+                            <button className=" text-white font-medium mb-6">
+                                <Link to={'/contact'}
+                                    className=" bg-[#29b4d2] px-6 py-2 rounded "
+                                >
+                                    Hire Me
+                                    <i className="ri-arrow-right-line ml-2"></i>
+                                </Link>
+                            </button>
+                    </div>
+
+                    <div className="h-[50%] w-[100%] flex items-center justify-center">
+                        <img src="./images/logo.jpg" alt="" 
+                            className="h-[336px] w-[240px]"
                         />
                     </div>
                </div>

@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
         <div>
             <nav 
-                className=" bg-black flex items-center justify-around py-4"
+                className=" bg-black flex items-center justify-around py-4  border-b"
                 style={{
                     position:'sticky',
                     top: 0
