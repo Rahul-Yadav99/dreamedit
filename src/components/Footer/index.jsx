@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 
-
 const Footer = () => {
 
     const menus = [
@@ -20,7 +19,7 @@ const Footer = () => {
 
     return (
         <div>
-            <footer className="md:grid md:grid-cols-3 flex flex-col md:px-32 md:py-12 py-4 gap-4 bg-black ">
+            <footer className="md:grid md:grid-cols-4 flex flex-col md:px-32 md:py-12 py-4 gap-4 bg-black ">
                 
 
                 <div className="flex flex-col justify-center items-center gap-4">
@@ -51,6 +50,18 @@ const Footer = () => {
                             }
                         </ul>
                     </div>
+                </div>
+
+                <div className="flex flex-col justify-center items-center gap-4 py-4">
+                        <Link to={'#'} className="text-white text-lg">
+                            <i className="ri-phone-line text-xl mr-2 text-[dodgerblue]"></i>
+                            9971924047
+                        </Link>
+
+                        <Link to={'#'} className="text-white text-lg">
+                            <i className="ri-mail-line text-xl mr-2 text-[dodgerblue]"></i>
+                            hy4015821@gmail.com
+                        </Link>
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-4 py-4">

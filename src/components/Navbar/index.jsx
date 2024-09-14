@@ -25,7 +25,13 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="bg-black flex items-center justify-around py-4 sticky">
+            <nav 
+                className=" bg-black flex items-center justify-around py-4"
+                style={{
+                    position:'sticky',
+                    top: 0
+                }}
+                >
                 <div className="flex items-cente justify-center">
                     <Link 
                         to={'/'}
