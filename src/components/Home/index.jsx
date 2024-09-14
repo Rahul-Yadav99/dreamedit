@@ -46,7 +46,7 @@ const Home = () => {
             wrapper="span"
             speed={20}
             style={{ 
-                fontSize: '20px', 
+                fontSize: '10px', 
                 display: 'inline-block', 
                 fontWeight: 500 ,
                 color: '#29b4d2',
@@ -63,7 +63,7 @@ const Home = () => {
         <div>
             <Navbar />
                <div className="overflow-hidden md:min-h-screen min-h-[50vh] py-12 bg-black  flex md:flex-row justify-center items-center flex-col-reverse md:gap-10 gap-5 md:px-32">
-                    <div className="h-full md:w-[60%] w-full px-3">
+                    <div className="h-full md:w-[60%] w-full">
                         {/* computer */}
                             <h1 
                                 className="text-white md:text-5xl md:font-[700] md:mb-6 md:flex hidden "
@@ -86,7 +86,7 @@ const Home = () => {
                             {/* mobile */}
 
                             <h1 
-                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] md:mb-6 flex md:hidden text-[20px] font-[500]"
+                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] md:mb-6 flex md:hidden text-[10px] font-[500]"
                                 style={{
                                     letterSpacing: '4px'
                                 }}
