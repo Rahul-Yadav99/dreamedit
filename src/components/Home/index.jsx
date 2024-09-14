@@ -46,7 +46,7 @@ const Home = () => {
             wrapper="span"
             speed={20}
             style={{ 
-                fontSize: '10px', 
+                fontSize: '15px', 
                 display: 'inline-block', 
                 fontWeight: 500 ,
                 color: '#29b4d2',
@@ -86,7 +86,7 @@ const Home = () => {
                             {/* mobile */}
 
                             <h1 
-                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] md:mb-6 flex md:hidden text-[10px] font-[500]"
+                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] md:mb-6 flex md:hidden text-[15px] font-[500]"
                                 style={{
                                     letterSpacing: '4px'
                                 }}
@@ -95,7 +95,7 @@ const Home = () => {
                             </h1>
 
                             <p
-                                className="text-white w-[600px] mb-6 flex md:hidden p-2"
+                                className="text-white w-[600px] mb-6 flex md:hidden p-2 text-[10px]"
                                 style={{
                                     letterSpacing: 2
                                 }}    
