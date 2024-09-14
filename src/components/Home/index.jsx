@@ -86,7 +86,7 @@ const Home = () => {
                             {/* mobile */}
 
                             <h1 
-                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] md:mb-6 flex md:hidden text-[15px] font-[500]"
+                                className="text-white mr-2 items-center justify-center  md:text-5xl md:font-[700] mb-6 flex md:hidden text-[15px] font-[500]"
                                 style={{
                                     letterSpacing: '4px'
                                 }}
