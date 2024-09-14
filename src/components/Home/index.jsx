@@ -95,7 +95,7 @@ const Home = () => {
                             </h1>
 
                             <p
-                                className="text-white w-[600px] mb-6 flex md:hidden p-2 text-[10px]"
+                                className="text-white w-[600px] mb-6 flex md:hidden pl-28 text-[10px] "
                                 style={{
                                     letterSpacing: 2
                                 }}    
@@ -103,7 +103,7 @@ const Home = () => {
                                 Hello! I'm Hritik Yadav. I'm a Video Editor.
                             </p>
 
-                            <button className=" text-white font-medium">
+                            <button className=" text-white font-medium ml-28">
                                 <Link to={'/contact'}
                                     className=" bg-[#29b4d2] px-6 py-2 rounded "
                                 >
