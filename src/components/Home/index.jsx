@@ -63,7 +63,7 @@ const Home = () => {
         <div>
             <Navbar />
             {/* computer */}
-               <div className="bg-black  md:flex  justify-center items-center gap-10 px-32 py-12 hidden">
+               <div className="bg-black h-screen md:flex  justify-center items-center gap-10 px-32 py-12 hidden">
                     <div className="w-[70%] mr-[50px] pl-[100px]">
                         {/* computer */}
                             <h1 
@@ -104,7 +104,7 @@ const Home = () => {
 
                {/* mobile */}
 
-               <div className="bg-black md:hidden flex justify-center items-center flex-col overflow-hidden gap-y-[25px] pb-4">
+               <div className="bg-black md:hidden flex justify-center items-center flex-col overflow-hidden gap-y-[25px]">
                     <div className="h-[50%] w-[100%]  pl-2 py-11">
                             <h1 
                                 className="text-white text-[50px] font-[700] mb-2"
@@ -139,7 +139,7 @@ const Home = () => {
 
                     <div className="h-[50%] w-[100%] flex items-center justify-center">
                         <img src="./images/logo.jpg" alt="" 
-                            className="h-[336px] w-[240px]"
+                            className="h-[280px] w-[210px]"
                         />
                     </div>
                </div>
