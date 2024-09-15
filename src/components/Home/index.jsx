@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer"
 import Navbar from "../Navbar"
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from "react";
+
 
 const Home = () => {
 
+    
 
     const ExampleComponent = () => {
         return (
@@ -64,7 +65,7 @@ const Home = () => {
             <Navbar />
             {/* computer */}
                <div className="bg-black h-screen md:flex  justify-center items-center gap-10 px-32 py-12 hidden">
-                    <div className="w-[70%] mr-[50px] pl-[100px]">
+                    <div className="w-[70%]">
                         {/* computer */}
                             <h1 
                                 className="text-white text-5xl font-[700] mb-6"
@@ -95,7 +96,7 @@ const Home = () => {
                             </button>
                     </div>
 
-                    <div className="h-full w-[30%] flex items-center justify-end pr-[200px] ">
+                    <div className="h-full w-[30%] flex items-center justify-end">
                         <img src="./images/logo.jpg" alt="" 
                             className="h-[336px] w-[240px]"
                         />
@@ -143,6 +144,11 @@ const Home = () => {
                         />
                     </div>
                </div>
+
+               <div className="h-[1000px] bg-pink-400" id="about">
+                                
+               </div>
+               
             <Footer />
         </div>
     )
