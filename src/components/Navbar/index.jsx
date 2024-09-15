@@ -71,7 +71,7 @@ const Navbar = () => {
                 </div>
             </nav>
                 <aside 
-                    className="fixed top-[63.4px] left-0 bg-black h-screen md:hidden overflow-hidden z-10"
+                    className="fixed top-0 left-0 bg-black h-screen md:hidden overflow-hidden z-10"
                     style={{
                             width: mobileSize ? '250px' : '0px',
                             transition: '0.3s'
