@@ -91,7 +91,7 @@ const Slider = () => {
         clickable: true,
         
       }}
-      modules={[Pagination, Autoplay]}
+      modules={[Pagination]}
       className="mySwiper md:hidden flex"
     >
       {
