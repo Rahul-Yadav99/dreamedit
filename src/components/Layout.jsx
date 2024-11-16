@@ -22,8 +22,8 @@ const Layout = ({children}) => {
 ]
   return (
     <div>
-      <header className='bg-[#101820] shadow-xl sticky top-0 left-0 border-b'>
-        <nav className='md:w-8/12 w-11/12 m-auto flex justify-between items-center'>
+      <header className='bg-[#101820] shadow-xl sticky top-0 left-0 border-b z-10'>
+        <nav className='bg-[#101820] md:w-8/12 w-11/12 m-auto flex justify-between items-center'>
             <Link to={'/'}>
                 <img src="/images/logo.png" alt="" className='w-[120px] object-cover' />
             </Link>
