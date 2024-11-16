@@ -21,7 +21,7 @@ const Home = () => {
           <img src="/images/hero.svg" alt="" />
         </div>
       </div>
-      <div className="md:w-8/12 w-11/12 m-auto">
+      <div className="md:w-8/12 w-11/12 m-auto py-5">
         <h1 className='font-bold md:text-4xl text-3xl text-[#FFD700] mb-5'>Our Client`s</h1>
         <Slider />
       </div>

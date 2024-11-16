@@ -67,7 +67,7 @@ const Slider = () => {
     >
       {
         clients.map((item, index) => (
-          <SwiperSlide key={index} className='md:w-8/12 w-11/12 m-auto flex justify-center items-center flex-col border border-white rounded-lg py-3'>
+          <SwiperSlide key={index} className='md:w-8/12 w-11/12 m-auto flex justify-center items-center flex-col border border-white rounded-lg py-3 border-b-[#FFD700]'>
             <img src={item.image} alt="" className='h-[150px] w-[150px] object-top object-cover rounded-full' />
             <div className="w-[300px] space-y-3 mt-2">
               <h1 className='text-center text-white'>{item.name}</h1>
@@ -96,10 +96,10 @@ const Slider = () => {
     >
       {
         clients.map((item, index) => (
-          <SwiperSlide key={index} className='md:w-8/12 w-11/12 m-auto flex justify-center items-center flex-col border border-white rounded-lg py-3'>
+          <SwiperSlide key={index} className='md:w-8/12 w-11/12 m-auto flex justify-center items-center flex-col border border-white rounded-lg py-3 border-b-[#FFD700]'>
             <img src={item.image} alt="" className='h-[150px] w-[150px] object-top object-cover rounded-full' />
-            <div className="w-[300px] space-y-3 mt-2">
-              <h1 className='text-center text-white'>{item.name}</h1>
+            <div className="w-[300px] space-y-3 mt-3">
+              <h1 className='text-center text-white font-semibold'>{item.name}</h1>
               <p className='text-center text-white'>{item.message}</p>
               <div className="flex justify-center">
                 <Link to={item.link} target='blank' className='block w-fit bg-[#FFD700] font-semibold px-4 py-1'>
