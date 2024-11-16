@@ -50,12 +50,12 @@ const Layout = ({children}) => {
       </header>
 
 
-        <div className='bg-gray-100'>
+        <div className='bg-[#101820]'>
             {children}
         </div>
 
 
-       <footer className='bg-[#101820] py-5'>
+       <footer className='bg-[#101820] py-5 border-t'>
        <div className="md:w-8/12 w-11/12 m-auto grid md:grid-cols-3 grid-cols-1 gap-8">
             <div className="">
             <Link to={'/'} className=' font-bold text-5xl text-[#FFFF]'>
