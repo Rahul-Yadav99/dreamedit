@@ -1,10 +1,6 @@
 import React from 'react'
 import Layout from './Layout'
-import Slider from './Slider'
-// f4f00a YELLOw
-// 121a23
-
-// #101820, #FEE715
+import ReactSlider from './ReactSlider'
 const Home = () => {
   return (
     <Layout>
@@ -23,7 +19,8 @@ const Home = () => {
       </div>
       <div className="md:w-8/12 w-11/12 m-auto py-5">
         <h1 className='font-bold md:text-4xl text-3xl text-[#FFD700] mb-5'>Our Client`s</h1>
-        <Slider />
+        {/* <Slider /> */}
+        <ReactSlider />
       </div>
     </Layout>
 
