@@ -5,8 +5,10 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap';
 const Home = () => {
 
-  const boxRef = useRef(null);
-  const textRef = useRef(null);
+  const heroOneRef = useRef(null);
+  const herotwoRef = useRef(null);
+  const btOneRef = useRef(null);
+  const btTwoRef = useRef(null);
 
   useGSAP(() => {
     // Initialize GSAP Timeline
@@ -14,18 +16,27 @@ const Home = () => {
 
     // Define animations
     timeline
-      .from(boxRef.current, {
+      .from(heroOneRef.current, {
         y: 300,
-        duration: 1,
+        duration: 0.7,
         delay: 0.5,
         opacity: 0,
       })
-      .from(textRef.current, {
+      .from(herotwoRef.current, {
         y: 300,
-        duration: 1,
+        duration: 0.7,
         opacity: 0,
-      });
-
+      })
+      .from(btOneRef.current, {
+        y: 300,
+        duration: 0.7,
+        opacity: 0,
+      })
+      .from(btTwoRef.current, {
+        y: 300,
+        duration: 0.7,
+        opacity: 0,
+      })
     // Cleanup (optional if animations won't reinitialize)
     return () => {
       timeline.kill();
@@ -35,15 +46,15 @@ const Home = () => {
   return (
     <Layout>
       <div className='md:w-8/12 w-11/12 m-auto md:min-h-screen min-h-[90vh] grid md:grid-cols-2 grid-cols-1'>
-        <div ref={boxRef} className="heroOne h-full flex justify-center items-start flex-col md:gap-y-9 gap-5">
+        <div ref={heroOneRef} className="heroOne h-full flex justify-center items-start flex-col md:gap-y-9 gap-5">
           <h1 className='text-white md:text-4xl text-2xl font-extrabold'>"Transforming Ideas into Visual <span className='md:text-5xl text-3xl ml-2 text-[#FFD700]'>Masterpieces</span> ." </h1>
           <div className="w-full md:space-x-10 space-x-5">
-            <button className='bg-[#FFD700] text-black px-6 py-3 rounded font-semibold'>Hire Me !</button>
-            <button className='border border-[#FFD700] text-white px-6 py-3 rounded font-semibold'>Resume !</button>
+            <button ref={btOneRef} className='bg-[#FFD700] text-black px-6 py-3 rounded font-semibold hover:border hover:border-[#FFD700] hover:text-white hover:bg-transparent'>Hire Me !</button>
+            <button ref={btTwoRef} className='border border-[#FFD700] text-white px-6 py-3 rounded font-semibold hover:bg-[#FFD700] hover:text-black'>Resume !</button>
           </div>
         </div>
 
-        <div ref={textRef} className="heroTwo h-full flex justify-center items-center">
+        <div ref={herotwoRef} className="heroTwo h-full flex justify-center items-center">
           <img src="/images/hero.svg" alt="" />
         </div>
       </div>
