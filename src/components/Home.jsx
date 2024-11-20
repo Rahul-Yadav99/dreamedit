@@ -22,11 +22,6 @@ const Home = () => {
         delay: 0.5,
         opacity: 0,
       })
-      .from(herotwoRef.current, {
-        y: 300,
-        duration: 0.7,
-        opacity: 0,
-      })
       .from(btOneRef.current, {
         y: 300,
         duration: 0.7,
@@ -37,6 +32,12 @@ const Home = () => {
         duration: 0.7,
         opacity: 0,
       })
+      .from(herotwoRef.current, {
+        y: 300,
+        duration: 0.7,
+        opacity: 0,
+      })
+      
     // Cleanup (optional if animations won't reinitialize)
     return () => {
       timeline.kill();
@@ -58,6 +59,7 @@ const Home = () => {
           <img src="/images/hero.svg" alt="" />
         </div>
       </div>
+      {/* <div className="md:w-8/12 w-11/12 m-auto py-5 bg-red-300 h-44"></div> */}
       <div className="md:w-8/12 w-11/12 m-auto py-5">
         <h1 className='font-bold md:text-4xl text-3xl text-[#FFD700] mb-5'>Our Client`s</h1>
         {/* <Slider /> */}
