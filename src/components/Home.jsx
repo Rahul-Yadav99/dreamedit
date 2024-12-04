@@ -7,9 +7,7 @@ const Home = () => {
 
   const heroOneRef = useRef(null);
   const herotwoRef = useRef(null);
-  const btOneRef = useRef(null);
-  const btTwoRef = useRef(null);
-
+  
   useGSAP(() => {
     // Initialize GSAP Timeline
     const timeline = gsap.timeline();
@@ -20,16 +18,6 @@ const Home = () => {
         y: 300,
         duration: 0.7,
         delay: 0.5,
-        opacity: 0,
-      })
-      .from(btOneRef.current, {
-        y: 300,
-        duration: 0.7,
-        opacity: 0,
-      })
-      .from(btTwoRef.current, {
-        y: 300,
-        duration: 0.7,
         opacity: 0,
       })
       .from(herotwoRef.current, {
@@ -50,8 +38,8 @@ const Home = () => {
         <div ref={heroOneRef} className="heroOne h-full flex justify-center items-start flex-col md:gap-y-9 gap-5">
           <h1 className='text-white md:text-4xl text-2xl font-extrabold'>"Transforming Ideas into Visual <span className='md:text-5xl text-3xl ml-2 text-[#FFD700]'>Masterpieces</span> ." </h1>
           <div className="w-full md:space-x-10 space-x-5">
-            <button ref={btOneRef} className='bg-[#FFD700] text-black px-6 py-3 rounded font-semibold hover:border hover:border-[#FFD700] hover:text-white hover:bg-transparent'>Hire Me !</button>
-            <button ref={btTwoRef} className='border border-[#FFD700] text-white px-6 py-3 rounded font-semibold hover:bg-[#FFD700] hover:text-black'>Resume !</button>
+            <button  className='bg-[#FFD700] text-black px-6 py-3 rounded font-semibold hover:border hover:border-[#FFD700] hover:text-white hover:bg-transparent'>Hire Me !</button>
+            <button  className='border border-[#FFD700] text-white px-6 py-3 rounded font-semibold hover:bg-[#FFD700] hover:text-black'>Resume !</button>
           </div>
         </div>
 
